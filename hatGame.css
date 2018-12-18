@@ -1,0 +1,20 @@
+body {
+    text-align: center;
+    color: steelblue;
+}
+
+table.table {
+    width: 50%;
+    text-align: center;
+}
+
+h2 {
+    height: 100px;
+    padding-top: 30px;
+}
+
+.chooseTeams {
+    padding-bottom: 30px;
+    font-size: 30px;
+    color: steelblue
+}
