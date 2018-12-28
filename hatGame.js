@@ -1,7 +1,7 @@
 var cat = null;
 //CHANGE THIS TO NULL 
 var numTeams = null;
-var teamTurn = 0;
+var teamTurn = 1;
 var items = ["Italy", "Germany", "Costa Rica", "Philippines", "Australia", "Cuba", "Kenya"];
 var gameOn = false;
 var teams = [];
@@ -11,6 +11,9 @@ var correctArray = [];
 var scores = [];
 var correctAnswers = {}
 var skipped = [];
+
+$(document).ready(function () {
+   
 
 
 $("#beginBtn").prop('disabled', true);
@@ -23,11 +26,11 @@ $("#finishBtn").on("click", function(){
     numTeams = parseInt(document.querySelector('input[name="inlineRadioOptions"]:checked').value,10);
     if(numTeams === null){
         alert("Please choose a number of teams");
+        // $("#finishWarning").text("Please choose number of teams...")
     }
     else {
         
         gameOn = true;
-        whosTurn();
         $("#beginBtn").prop('disabled', false);
     };
 
@@ -165,7 +168,7 @@ function whosTurn() {
     // Check if game is over
 
    
-
+});
 
     
 
