@@ -23,13 +23,11 @@ $("#beginBtn").prop('disabled', true);
 $("#finishBtn").on("click", function(){
     console.log("submitted");
 
-    numTeams = parseInt(document.querySelector('input[name="inlineRadioOptions"]:checked').value,10);
+    numTeams = parseInt(document.querySelector('input[name="options"]:checked').value,10);
     if(numTeams === null){
         alert("Please choose a number of teams");
-        // $("#finishWarning").text("Please choose number of teams...")
-    }
-    else {
-        
+        $("#finishWarning").text("Please choose number of teams...")
+    } else {
         gameOn = true;
         $("#beginBtn").prop('disabled', false);
     };
@@ -47,9 +45,14 @@ $("#finishBtn").on("click", function(){
         scores[y] = 0;
         correctAnswers[y] = [];
     }
-
-
 });
+
+$("#finishBtn").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".mainGame").offset().top},
+        'slow');
+});
+
 
 // setup table depending on numTeams
 
@@ -117,7 +120,7 @@ function whosTurn() {
             // console.log(items);
             displayItem = items[Math.floor(Math.random()*items.length)];
             $("#displayItem").text(displayItem);
-            $("#message").text("There are " + items.length + "items left");
+            $("#message").text("There are " + items.length + " items left");
             scores[teamTurn - 1]++;
             // console.log(scores);
             $("#team" + teamTurn + "Score").text(scores[teamTurn - 1]);

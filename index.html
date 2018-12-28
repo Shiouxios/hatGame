@@ -16,23 +16,21 @@
     <div class="setup">
         <h5>How many teams are playing?</h5>
 
-        <form>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 1
-                </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"> 2
-                </label>
-            </div>
-            <div class="form-check form-check-inline disabled">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 3
-                </label>
-            </div>
-        </form>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option1" autocomplete="off" value="1"> 1
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option2" autocomplete="off" value="2"> 2
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option3" autocomplete="off" value="3"> 3
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option4" autocomplete="off" value="4"> 4
+            </label>
+    
+        </div>
 
         <h5 class="mt-4">Add some items to the hat!</h5>
 
@@ -42,32 +40,31 @@
                     <input class="form-control py-3" type="text" id="items" placeholder="Items">
                 </div>
                 <div class="col-auto">
-                    <button type="button" class="btn btn-outline-primary" id="addBtn">Add</button>
+                    <button type="button" class="btn btn-outline-secondary" id="addBtn">Add</button>
                 </div>
             </div> 
         </form>
         <p>There are <span id="numItems">7</span> items in the hat. Item added!</p>
 
-        <button type="button" class="btn btn-outline-primary" id="finishBtn">Finish</button>
+        <button type="button" class="btn btn-outline-secondary" id="finishBtn">Finish</button>
         <p id="finishWarning"></p>
     </div>
 
 
 
 
-<div class="mainGame">
-    <h3 id="whosTurn">Team 1's turn!</h3>
-    <button type="button" class="btn btn-outline-primary" id="beginBtn">Click to begin</button>
-    <!-- <p id="timeLeft">15</p> -->
-    <h2 id="displayItem"></h2>
-    <button type="button" class="btn btn-outline-primary" id="correctBtn">Correct</button>
-    <button type="button" class="btn btn-outline-primary" id="skipBtn">Skip</button>
-    <button type="button" class="btn btn-outline-primary" id="nextTurn">Next Team</button>
-    <p id="message"></p>
-</div>
+    <div class="mainGame">
+        <h3 id="whosTurn">Team 1's turn!</h3>
+        <button type="button" class="btn btn-outline-secondary" id="beginBtn">Click to begin</button>
+        <h2 id="displayItem"></h2>
+        <button type="button" class="btn btn-outline-secondary" id="correctBtn">Correct</button>
+        <button type="button" class="btn btn-outline-secondary" id="skipBtn">Skip</button>
+        <button type="button" class="btn btn-outline-secondary" id="nextTurn">Next Team</button>
+        <p id="message"></p>
+    </div>
 
 
-    <div class="scores">
+    <div class="row scores">
         <table class="table">
             <thead>
                 <tr>

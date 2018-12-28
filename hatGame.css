@@ -1,9 +1,9 @@
 body {
     text-align: center;
     /* color: steelblue; */
-    background: #cb356b; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, rgb(100, 10, 100, 0.993), rgb(10,100,200)); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, rgb(100, 10, 100, 0.993), rgb(10,100,200)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* background: #cb356b; /* fallback for old browsers */
+    /* background: -webkit-linear-gradient(to top, rgb(100, 10, 100, 0.993), rgb(10,100,200)); Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(to top, rgb(100, 10, 100, 0.993), rgb(10,100,200)); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ */
 }
 
 table.table {
@@ -31,4 +31,8 @@ h2 {
 .setup {
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+.scores {
+    justify-content: center;
 }
